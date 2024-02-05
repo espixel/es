@@ -100,19 +100,25 @@ function loadHomeVid() {
 
             var fullTitle = back[i]["title"];
             var divideTitle = fullTitle.split(" | ");
-            
-            var chapter = "第" + (i+1).toString() + "集 ";
+
+            const epNoRemoved = divideTitle[0].slice(3);
+
+            //console.log(epNoRemoved)            
+            //var chapter = "第" + (i+1).toString() + "集 ";
             
             var appendText = '<div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">'
                 + '<div class="member">'
                 +   '<div class="member-img">'
                 +       '<a href="./video/watch.html?video_id=' + back[i]["video_id"] + '"><img src="https://i.ytimg.com/vi/' + back[i]["video_id"] + '/hqdefault.jpg" class="img-fluid" alt=""></a>'
-                +           '<div class="social">'                  
-                +               '<a href="./video/watch.html?video_id=' + back[i]["video_id"] + '"><i class="icofont-ui-video-play"></i></a>'                  
-                +           '</div>'                
+                
+                //+           '<div class="social">'                               
+                //+               '<a href="./video/watch.html?video_id=' + back[i]["video_id"] + '"><i class="icofont-ui-video-play"></i></a>'                  
+                //+           '</div>'
+
                 +   '</div>'
                 +   '<div class="member-info">'
-                +       '<h7>' + divideTitle[0] + '<br />' + chapter + divideTitle[1] + '</h7>'                        
+                +       '<h4>' + '<a href="./video/watch.html?video_id=' + back[i]["video_id"] + '">' + epNoRemoved + '</h4>'
+                +       '<span>' + divideTitle[1] + '</span>'                        
                 +   '</div>'
                 + '</div>'
             + '</div>';
