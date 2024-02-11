@@ -1,4 +1,4 @@
-var CORSProxy = "https://espixel.github.io/es/";
+var CORSProxy = "";
 var activeArticle = 0;
 var totalArticle = 3;
 
